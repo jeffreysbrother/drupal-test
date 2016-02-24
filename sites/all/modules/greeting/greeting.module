@@ -8,7 +8,13 @@ function greeting_menu() {
     'page callback' => 'say_hello',
     'access callback' => TRUE,
     'type' => MENU_NORMAL_ITEM
-  ); 
+  );
+  $items['goodbye'] = array(
+    'title' => "Goodbye, Friend!",
+    'page callback' => 'say_goodbye',
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM
+  );
   return $items;
 }
 
@@ -16,4 +22,8 @@ function greeting_menu() {
 // handles output
 function say_hello() {
   return '<p>Hello my dear friend</p>';
+}
+
+function say_goodbye() {
+  return '<p>Goodbye, you stupid jerk!</p>';
 }
